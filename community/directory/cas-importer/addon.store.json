@@ -1,0 +1,16 @@
+{
+  "$schema": "../../../schemas/addon-store.schema.json",
+  "id": "cas-importer",
+  "name": "CAS Importer",
+  "description": "Import detailed CAS PDFs from CAMS and KFintech (Indian mutual fund statements) into Wealthfolio. The PDF is read on your device with casparser; purchases, redemptions, switches and IDCW payouts come in with their cash deposits and withdrawals.",
+  "author": {
+    "name": "Joel Tony",
+    "url": "https://github.com/jay-tau"
+  },
+  "trust": "community",
+  "status": "active",
+  "tags": ["import", "activities", "mutual-funds", "india", "pdf"],
+  "commercialModel": "free",
+  "repository": "https://github.com/jay-tau/wealthfolio-cas-importer",
+  "supportUrl": "https://github.com/jay-tau/wealthfolio-cas-importer/issues"
+}

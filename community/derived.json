@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T13:14:14.789Z",
+  "generatedAt": "2026-10-27T17:57:51.094Z",
   "addons": {
     "adanos-sentiment": {
       "id": "adanos-sentiment",
@@ -98,6 +98,53 @@
       "notices": [],
       "problems": [],
       "warnings": []
+    },
+    "cas-importer": {
+      "id": "cas-importer",
+      "runtimeId": "cas-importer",
+      "repository": "https://github.com/jay-tau/wealthfolio-cas-importer",
+      "defaultBranch": "main",
+      "commit": "3da68b390440725fb5910e266aa71689f855e544",
+      "license": "MIT",
+      "lastPushedAt": "2026-10-27",
+      "manifest": {
+        "name": "CAS Importer",
+        "version": "1.0.0",
+        "sdkVersion": "3.11.0",
+        "minWealthfolioVersion": "3.11.0",
+        "permissions": [
+          {
+            "category": "accounts",
+            "purpose": "Choose the account each PAN's or folio's transactions go to"
+          },
+          {
+            "category": "activities",
+            "purpose": "Check the statement's transactions against the account's activities, then import them"
+          },
+          {
+            "category": "market-data",
+            "purpose": "Find each fund by the ISIN or name printed on the statement, or by what you type"
+          },
+          {
+            "category": "secrets",
+            "purpose": "Keep the statement password when you tick Remember, and forget it"
+          }
+        ]
+      },
+      "dataHandling": {
+        "userDataLeavesDevice": false,
+        "externalServices": [],
+        "basis": "It never asked for internet access, so Wealthfolio will not let it connect to anything."
+      },
+      "compatibility": {
+        "state": "current",
+        "detail": "Built against SDK 3.11.0."
+      },
+      "notices": [],
+      "problems": [],
+      "warnings": [
+        "declares the secrets permission but not network, so any service it stores credentials for is unreachable"
+      ]
     },
     "degiro-importer": {
       "id": "degiro-importer",
