@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T17:57:51.094Z",
+  "generatedAt": "2026-10-30T13:25:26.421Z",
   "addons": {
     "adanos-sentiment": {
       "id": "adanos-sentiment",
@@ -104,26 +104,42 @@
       "runtimeId": "cas-importer",
       "repository": "https://github.com/jay-tau/wealthfolio-cas-importer",
       "defaultBranch": "main",
-      "commit": "3da68b390440725fb5910e266aa71689f855e544",
+      "commit": "5a925e2cc7fe90a6a74e1779f97ec1668602a483",
       "license": "MIT",
-      "lastPushedAt": "2026-10-27",
+      "lastPushedAt": "2026-10-30",
       "manifest": {
         "name": "CAS Importer",
-        "version": "1.0.0",
+        "version": "1.1.0",
         "sdkVersion": "3.11.0",
         "minWealthfolioVersion": "3.11.0",
         "permissions": [
           {
             "category": "accounts",
-            "purpose": "Choose the account each PAN's or folio's transactions go to"
+            "purpose": "Choose the account each PAN's or folio's transactions go to and the bank account their cash comes from and goes to, or the account each folio's, demat account's or PRAN's holdings go to"
+          },
+          {
+            "category": "portfolio",
+            "purpose": "Warn when another account already holds an asset, so it isn't counted twice"
+          },
+          {
+            "category": "snapshots",
+            "purpose": "Read the account's holdings on the statement's date, then save the statement's holdings as a snapshot"
           },
           {
             "category": "activities",
-            "purpose": "Check the statement's transactions against the account's activities, then import them"
+            "purpose": "Check transactions before importing activities, a summary or depository statement's units against accounts that track transactions, and stock splits before carrying holdings into a snapshot. When you choose to use a bank account's deposit or withdrawal for a fund's cash, add the fund's transfer, change the bank's row into a transfer if it isn't one, and link the two; transfers already linked aren't offered"
           },
           {
             "category": "market-data",
-            "purpose": "Find each fund by the ISIN or name printed on the statement, or by what you type"
+            "purpose": "Find each asset by the ISIN or name printed on the statement, or by what you type, and check existing assets before using statement prices"
+          },
+          {
+            "category": "quotes",
+            "purpose": "Save the statement's price for holdings priced by hand on the statement's date, and keep the last price of those carried over, instead of the average cost a snapshot save writes there"
+          },
+          {
+            "category": "assets",
+            "purpose": "Read assets' current pricing mode and, to check a statement's units, the symbol and exchange of the assets in accounts that track transactions, and keep the printed details of bonds, NPS schemes, and funds and shares priced from statements on their Wealthfolio assets"
           },
           {
             "category": "secrets",
