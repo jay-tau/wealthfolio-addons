@@ -12,6 +12,8 @@ Listing requirements and the publisher attestation are in
 | --- | --- | --- | --- | --- | --- |
 | Adanos Sentiment | Adanos | active | MIT | SDK 3.6+ | [Repo](https://github.com/adanos-software/wealthfolio-adanos-sentiment) |
 | Asset Amount & Cash Timeline | bryanrvo1511 | pending | MIT | pre-3.6 — rebuild needed | [Repo](https://github.com/bryanrvo/Asset-amount-Cash-Timeline-add-on) |
+| Broker Importer | waldonso2 | active | MIT | SDK 3.6+ | [Repo](https://github.com/waldonso2/wealthfolio-importer-addon) |
+| CAS Importer | Joel Tony | active | MIT | SDK 3.6+ | [Repo](https://github.com/jay-tau/wealthfolio-cas-importer) |
 | DeGiro Importer | shuisman | active | MIT | SDK 3.6+ | [Repo](https://github.com/shuisman/degiro-importer) |
 | Dividends Importer | kwaich | pending | MIT | SDK 3.6+ | [Repo](https://github.com/kwaich/dividend-tracker) |
 | Wealthfolio Dividend Tracker | ragnarok896209 | pending | none | pre-3.6 — rebuild needed | [Repo](https://github.com/ragnarok-89/Wealthfolio-Dividend-Tracker) |
@@ -22,7 +24,9 @@ Listing requirements and the publisher attestation are in
 | SimpleFIN Sync | Christian Mendieta | active | MIT | SDK 3.6+ | [Repo](https://github.com/christancho/simplefin-wealthfolio-addon) |
 | Trade Republic Importer | blastik | active | MIT | SDK 3.6+ | [Repo](https://github.com/blastik/trade-republic-importer-addon) |
 | Value Averaging Addon | wujoe | pending | MIT | pre-3.6 — rebuild needed | [Repo](https://github.com/WuJoe826/Value-Averaging-Addon) |
+| WealthTax | advenacodex | active | MIT | SDK 3.6+ | [Repo](https://github.com/advenacodex/wealth-tax) |
 | Skatt (Sweden) | AlexanderBabel | active | MIT | SDK 3.6+ | [Repo](https://github.com/AlexanderBabel/wealthfolio-skatt) |
+| Transfer Finder | Mark Rickert | active | MIT | SDK 3.6+ | [Repo](https://github.com/markrickert/wealthfolio-transfer-finder) |
 
 Licence and runtime are **derived** from each publisher's repository, not
 declared here — see [community/derived.json](derived.json), refreshed with

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T13:14:14.789Z",
+  "generatedAt": "2026-10-31T15:46:44.814Z",
   "addons": {
     "adanos-sentiment": {
       "id": "adanos-sentiment",
@@ -98,6 +98,132 @@
       "notices": [],
       "problems": [],
       "warnings": []
+    },
+    "broker-importer": {
+      "id": "broker-importer",
+      "runtimeId": "broker-importer",
+      "repository": "https://github.com/waldonso2/wealthfolio-importer-addon",
+      "defaultBranch": "main",
+      "commit": "2d8d000668146e7c1af236807472d57222500d9d",
+      "license": "MIT",
+      "lastPushedAt": "2026-10-30",
+      "manifest": {
+        "name": "Broker Importer",
+        "version": "3.11.0",
+        "sdkVersion": "3.11.0",
+        "minWealthfolioVersion": "3.11.0",
+        "permissions": [
+          {
+            "category": "accounts",
+            "purpose": "List accounts so the user can select their cash and portfolio accounts"
+          },
+          {
+            "category": "activities",
+            "purpose": "Validate and import activities parsed from broker CSV exports and PDF statements; read existing trades and dividends to skip transactions already imported from another source; move activities to the right asset when a security mapping is corrected"
+          },
+          {
+            "category": "assets",
+            "purpose": "Create new asset entries for unrecognised securities during import"
+          },
+          {
+            "category": "secrets",
+            "purpose": "Persist addon configuration (account selection, transfer patterns, security mappings) across sessions"
+          },
+          {
+            "category": "ui",
+            "purpose": "Add importer navigation item to sidebar and register addon routes"
+          },
+          {
+            "category": "query",
+            "purpose": "Refresh host application data after import"
+          },
+          {
+            "category": "portfolio",
+            "purpose": "Trigger portfolio recalculation after import"
+          },
+          {
+            "category": "market-data",
+            "purpose": "Search for securities when mapping unrecognised tickers"
+          }
+        ]
+      },
+      "dataHandling": {
+        "userDataLeavesDevice": false,
+        "externalServices": [],
+        "basis": "It never asked for internet access, so Wealthfolio will not let it connect to anything."
+      },
+      "compatibility": {
+        "state": "current",
+        "detail": "Built against SDK 3.11.0."
+      },
+      "notices": [],
+      "problems": [],
+      "warnings": [
+        "declares the secrets permission but not network, so any service it stores credentials for is unreachable"
+      ]
+    },
+    "cas-importer": {
+      "id": "cas-importer",
+      "runtimeId": "cas-importer",
+      "repository": "https://github.com/jay-tau/wealthfolio-cas-importer",
+      "defaultBranch": "main",
+      "commit": "ebc67db2765245ab9402c27796930cefdd8f3d3d",
+      "license": "MIT",
+      "lastPushedAt": "2026-10-31",
+      "manifest": {
+        "name": "CAS Importer",
+        "version": "1.1.0",
+        "sdkVersion": "3.11.0",
+        "minWealthfolioVersion": "3.11.0",
+        "permissions": [
+          {
+            "category": "accounts",
+            "purpose": "Choose the account each PAN's or folio's transactions go to and the bank account their cash comes from and goes to, or the account each folio's, demat account's or PRAN's holdings go to"
+          },
+          {
+            "category": "portfolio",
+            "purpose": "Warn when another account already holds an asset, so it isn't counted twice"
+          },
+          {
+            "category": "snapshots",
+            "purpose": "Read the account's holdings on the statement's date, then save the statement's holdings as a snapshot"
+          },
+          {
+            "category": "activities",
+            "purpose": "Check transactions before importing activities, a summary or depository statement's units against accounts that track transactions, and stock splits before carrying holdings into a snapshot. When you choose to use a bank account's deposit or withdrawal for a fund's cash, add the fund's transfer, change the bank's row into a transfer if it isn't one, and link the two; transfers already linked aren't offered"
+          },
+          {
+            "category": "market-data",
+            "purpose": "Find each asset by the ISIN or name printed on the statement, or by what you type, and check existing assets before using statement prices"
+          },
+          {
+            "category": "quotes",
+            "purpose": "Save the statement's price for holdings priced by hand on the statement's date, and keep the last price of those carried over, instead of the average cost a snapshot save writes there"
+          },
+          {
+            "category": "assets",
+            "purpose": "Read assets' current pricing mode and, to check a statement's units, the symbol and exchange of the assets in accounts that track transactions, and keep the printed details of bonds, NPS schemes, and funds and shares priced from statements on their Wealthfolio assets"
+          },
+          {
+            "category": "secrets",
+            "purpose": "Keep the statement password when you tick Remember, and forget it"
+          }
+        ]
+      },
+      "dataHandling": {
+        "userDataLeavesDevice": false,
+        "externalServices": [],
+        "basis": "It never asked for internet access, so Wealthfolio will not let it connect to anything."
+      },
+      "compatibility": {
+        "state": "current",
+        "detail": "Built against SDK 3.11.0."
+      },
+      "notices": [],
+      "problems": [],
+      "warnings": [
+        "declares the secrets permission but not network, so any service it stores credentials for is unreachable"
+      ]
     },
     "degiro-importer": {
       "id": "degiro-importer",
@@ -669,6 +795,53 @@
       "problems": [],
       "warnings": []
     },
+    "wealth-tax": {
+      "id": "wealth-tax",
+      "runtimeId": "wealth-tax",
+      "repository": "https://github.com/advenacodex/wealth-tax",
+      "defaultBranch": "main",
+      "commit": "c3cbf45dd31577faf540b2aca85ba7a263e67c2b",
+      "license": "MIT",
+      "lastPushedAt": "2026-10-29",
+      "manifest": {
+        "name": "WealthTax",
+        "version": "1.1.1",
+        "sdkVersion": "3.11.0",
+        "minWealthfolioVersion": "3.8.0",
+        "permissions": [
+          {
+            "category": "activities",
+            "purpose": "Read full activity history to compute FIFO cost basis and realized gains"
+          },
+          {
+            "category": "accounts",
+            "purpose": "Read account groups for group-level FIFO pooling and account names"
+          },
+          {
+            "category": "settings",
+            "purpose": "Read the base currency for displaying converted amounts"
+          },
+          {
+            "category": "ui",
+            "purpose": "Add a sidebar entry and page for the tax report"
+          }
+        ]
+      },
+      "dataHandling": {
+        "userDataLeavesDevice": false,
+        "externalServices": [],
+        "basis": "It never asked for internet access, so Wealthfolio will not let it connect to anything."
+      },
+      "compatibility": {
+        "state": "current",
+        "detail": "Built against SDK 3.11.0."
+      },
+      "notices": [
+        "not-tax-advice"
+      ],
+      "problems": [],
+      "warnings": []
+    },
     "wealthfolio-skatt": {
       "id": "wealthfolio-skatt",
       "runtimeId": "wealthfolio-skatt",
@@ -729,6 +902,39 @@
       "notices": [
         "not-tax-advice"
       ],
+      "problems": [],
+      "warnings": []
+    },
+    "wealthfolio-transfers": {
+      "id": "wealthfolio-transfers",
+      "runtimeId": "wealthfolio-transfers",
+      "repository": "https://github.com/markrickert/wealthfolio-transfer-finder",
+      "defaultBranch": "main",
+      "commit": "bd6d9f0c0a982a7f654fcd29cb8492b76e095fe8",
+      "license": "MIT",
+      "lastPushedAt": "2026-09-30",
+      "manifest": {
+        "name": "Transfer Finder",
+        "version": "0.1.2",
+        "sdkVersion": "3.9.0",
+        "minWealthfolioVersion": "3.9.0",
+        "permissions": [
+          {
+            "category": "activities",
+            "purpose": "Detect and link internal transfer pairs"
+          }
+        ]
+      },
+      "dataHandling": {
+        "userDataLeavesDevice": false,
+        "externalServices": [],
+        "basis": "It never asked for internet access, so Wealthfolio will not let it connect to anything."
+      },
+      "compatibility": {
+        "state": "current",
+        "detail": "Built against SDK 3.9.0."
+      },
+      "notices": [],
       "problems": [],
       "warnings": []
     }
