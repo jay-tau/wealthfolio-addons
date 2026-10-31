@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T13:14:14.789Z",
+  "generatedAt": "2026-10-29T13:29:30.588Z",
   "addons": {
     "adanos-sentiment": {
       "id": "adanos-sentiment",
@@ -665,6 +665,53 @@
       "notices": [
         "not-financial-advice",
         "not-investment-advice"
+      ],
+      "problems": [],
+      "warnings": []
+    },
+    "wealth-tax": {
+      "id": "wealth-tax",
+      "runtimeId": "wealth-tax",
+      "repository": "https://github.com/advenacodex/wealth-tax",
+      "defaultBranch": "main",
+      "commit": "c3cbf45dd31577faf540b2aca85ba7a263e67c2b",
+      "license": "MIT",
+      "lastPushedAt": "2026-10-29",
+      "manifest": {
+        "name": "WealthTax",
+        "version": "1.1.1",
+        "sdkVersion": "3.11.0",
+        "minWealthfolioVersion": "3.8.0",
+        "permissions": [
+          {
+            "category": "activities",
+            "purpose": "Read full activity history to compute FIFO cost basis and realized gains"
+          },
+          {
+            "category": "accounts",
+            "purpose": "Read account groups for group-level FIFO pooling and account names"
+          },
+          {
+            "category": "settings",
+            "purpose": "Read the base currency for displaying converted amounts"
+          },
+          {
+            "category": "ui",
+            "purpose": "Add a sidebar entry and page for the tax report"
+          }
+        ]
+      },
+      "dataHandling": {
+        "userDataLeavesDevice": false,
+        "externalServices": [],
+        "basis": "It never asked for internet access, so Wealthfolio will not let it connect to anything."
+      },
+      "compatibility": {
+        "state": "current",
+        "detail": "Built against SDK 3.11.0."
+      },
+      "notices": [
+        "not-tax-advice"
       ],
       "problems": [],
       "warnings": []

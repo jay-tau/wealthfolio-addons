@@ -22,6 +22,7 @@ Listing requirements and the publisher attestation are in
 | SimpleFIN Sync | Christian Mendieta | active | MIT | SDK 3.6+ | [Repo](https://github.com/christancho/simplefin-wealthfolio-addon) |
 | Trade Republic Importer | blastik | active | MIT | SDK 3.6+ | [Repo](https://github.com/blastik/trade-republic-importer-addon) |
 | Value Averaging Addon | wujoe | pending | MIT | pre-3.6 — rebuild needed | [Repo](https://github.com/WuJoe826/Value-Averaging-Addon) |
+| WealthTax | advenacodex | active | MIT | SDK 3.6+ | [Repo](https://github.com/advenacodex/wealth-tax) |
 | Skatt (Sweden) | AlexanderBabel | active | MIT | SDK 3.6+ | [Repo](https://github.com/AlexanderBabel/wealthfolio-skatt) |
 
 Licence and runtime are **derived** from each publisher's repository, not
