@@ -24,6 +24,7 @@ Listing requirements and the publisher attestation are in
 | Value Averaging Addon | wujoe | pending | MIT | pre-3.6 — rebuild needed | [Repo](https://github.com/WuJoe826/Value-Averaging-Addon) |
 | WealthTax | advenacodex | active | MIT | SDK 3.6+ | [Repo](https://github.com/advenacodex/wealth-tax) |
 | Skatt (Sweden) | AlexanderBabel | active | MIT | SDK 3.6+ | [Repo](https://github.com/AlexanderBabel/wealthfolio-skatt) |
+| Transfer Finder | Mark Rickert | active | MIT | SDK 3.6+ | [Repo](https://github.com/markrickert/wealthfolio-transfer-finder) |
 
 Licence and runtime are **derived** from each publisher's repository, not
 declared here — see [community/derived.json](derived.json), refreshed with
